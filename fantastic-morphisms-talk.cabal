@@ -57,9 +57,19 @@ test-suite fantastic-morphisms-talk-test
     default-language: Haskell2010
     -- other-modules:
     -- other-extensions:
+    default-extensions: TypeApplications
+                      , ScopedTypeVariables
     type:             exitcode-stdio-1.0
     hs-source-dirs:   test
     main-is:          Main.hs
     build-depends:
         base
+      , QuickCheck
+      , quickcheck-instances
+      , tasty
+      , tasty-quickcheck
+      , tasty-hunit
+      , array
+      , extra
+      , containers
       , fantastic-morphisms-talk
